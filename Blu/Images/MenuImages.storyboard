@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="Y6W-OH-hqX" customClass="MenuViewController" customModule="Blu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dhv-2s-udI">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="npO-jo-O00">
+                                        <rect key="frame" x="66.666666666666686" y="64" width="260" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="03d-jV-8om"/>
+                                            <constraint firstAttribute="width" constant="260" id="XAe-iF-WlG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmR-bM-E7g">
+                                        <rect key="frame" x="16" y="436" width="361" height="56"/>
+                                        <color key="backgroundColor" red="0.43208132580000003" green="0.65108189569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="ECk-0D-1P1"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cambiar imagen">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="changeImage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WJR-WV-4bE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rk4-ev-V8Z">
+                                        <rect key="frame" x="16" y="540" width="361" height="56"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="QcK-Po-2oB"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cerrar sesión">
+                                            <color key="baseForegroundColor" red="0.43208132580000003" green="0.65108189569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="logOut:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BTn-z7-kcB"/>
+                                        </connections>
+                                    </button>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="tUp-He-IYu">
+                                        <rect key="frame" x="186.66666666666666" y="369.66666666666669" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="tUp-He-IYu" firstAttribute="centerX" secondItem="Dhv-2s-udI" secondAttribute="centerX" id="25r-GW-xU7"/>
+                                    <constraint firstItem="tUp-He-IYu" firstAttribute="centerY" secondItem="Dhv-2s-udI" secondAttribute="centerY" id="27B-4B-CyI"/>
+                                    <constraint firstAttribute="trailing" secondItem="cmR-bM-E7g" secondAttribute="trailing" constant="16" id="9X2-qL-vhv"/>
+                                    <constraint firstItem="cmR-bM-E7g" firstAttribute="top" secondItem="npO-jo-O00" secondAttribute="bottom" constant="72" id="KLm-ZU-ivW"/>
+                                    <constraint firstItem="npO-jo-O00" firstAttribute="top" secondItem="Dhv-2s-udI" secondAttribute="top" constant="64" id="Pl3-Mq-QyX"/>
+                                    <constraint firstItem="npO-jo-O00" firstAttribute="centerX" secondItem="Dhv-2s-udI" secondAttribute="centerX" id="Rsf-6G-C7D"/>
+                                    <constraint firstAttribute="trailing" secondItem="rk4-ev-V8Z" secondAttribute="trailing" constant="16" id="XOs-Jf-r9z"/>
+                                    <constraint firstItem="cmR-bM-E7g" firstAttribute="leading" secondItem="Dhv-2s-udI" secondAttribute="leading" constant="16" id="byF-P2-QJ2"/>
+                                    <constraint firstItem="rk4-ev-V8Z" firstAttribute="top" secondItem="cmR-bM-E7g" secondAttribute="bottom" constant="48" id="mRB-f8-fpZ"/>
+                                    <constraint firstItem="rk4-ev-V8Z" firstAttribute="leading" secondItem="Dhv-2s-udI" secondAttribute="leading" constant="16" id="wwJ-nl-bKj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.43208132580000003" green="0.65108189569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Dhv-2s-udI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="C6d-LC-rET"/>
+                            <constraint firstItem="Dhv-2s-udI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="MB7-gd-1DC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Dhv-2s-udI" secondAttribute="trailing" id="jzY-7s-Mab"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Dhv-2s-udI" secondAttribute="bottom" id="xoM-u3-RVY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="tUp-He-IYu" id="ddr-rR-XfD"/>
+                        <outlet property="dogImage" destination="npO-jo-O00" id="eHO-2b-53s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
